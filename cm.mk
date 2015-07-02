@@ -1,11 +1,11 @@
-## Specify phone tech before including full_phone
-$(call inherit-product, vendor/cm/config/gsm.mk)
+# Inherit some common CM stuff.
+$(call inherit-product, vendor/cm/config/common_full_phone.mk)
+
+# Enhanced NFC
+$(call inherit-product, vendor/cm/config/nfc_enhanced.mk)
 
 # Release name
 PRODUCT_RELEASE_NAME := serranovelte
-
-# Inherit some common CM stuff.
-$(call inherit-product, vendor/cm/config/common_full_phone.mk)
 
 # Inherit device configuration
 $(call inherit-product, device/samsung/serranovelte/device_serranovelte.mk)
